@@ -1,5 +1,6 @@
 import random as rd
-
+counter = 1
+mumber = random.randint(1,10)
 guesses = []
 
 print("Lets play guess the number! I will have a number in mind from one  to ten.")
@@ -9,5 +10,3 @@ while len(guesses) < 5:
    mumber = int(input("Type the number you guessed!: "))
    guesses.append(mumber)
    print(guesses)
-mumber = random.randint(1,10)
-counter = 1
