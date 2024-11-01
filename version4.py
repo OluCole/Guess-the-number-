@@ -1,4 +1,4 @@
-import random
+import random as rd
 
 guesses = []
 
