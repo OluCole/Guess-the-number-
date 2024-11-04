@@ -1,0 +1,44 @@
+import random as rd
+
+runner = True
+games_played = 0
+games_won = 0
+
+while runner:
+  print("==SCOREBOARD==")
+  print(f"Games Played: {games_played}")
+  print(f"Games Won: {games_won}")
+  print()
+  break
+
+
+mumber = rd.randint(1,100)
+counter = 7
+guesses = []
+
+
+print("Lets play guess the number! I will have a number in mind from one to ten.")
+print("When you think you know the number I have in mind, type it!")
+
+print(mumber)
+
+while len(guesses) < 10:
+  print(f"You have already guessed: {guesses}")
+  number = int(input("Type the number you guessed!: "))
+  guesses.append(number)
+  if number > mumber:
+     print("too high!")
+  elif number < mumber:
+     print("too low!")
+  elif mumber == number:
+   print("You win!")
+   break
+
+counter -= 1
+  
+games_played += 1
+runner = input("Wanna play again?(yes/no): ")
+if runner == "y":
+  runner = True
+if runner =="n":
+  runner = False
